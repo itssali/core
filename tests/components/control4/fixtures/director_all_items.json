@@ -40,5 +40,25 @@
     "manufacturer": "Lutron",
     "roomName": "Living Room",
     "model": "QSWS2-1BRLI"
+  },
+  {
+    "id": 345,
+    "name": "Hallway Relay",
+    "type": 7,
+    "parentId": 678,
+    "categories": ["lights"]
+  },
+  {
+    "id": 346,
+    "name": "Kitchen Dimmer",
+    "type": 7,
+    "parentId": 678,
+    "categories": ["lights"]
+  },
+  {
+    "id": 678,
+    "manufacturer": "Control4",
+    "roomName": "Hallway",
+    "model": "C4-APD120"
   }
 ]

@@ -44,6 +44,9 @@ async def async_setup_entry(
             return await update_variables_for_config_entry(
                 hass, entry, {CONTROL4_NON_DIMMER_VAR}
             )
+        except ValueError:
+            # The director returns an empty response when no item has the variable
+            return {}
         except C4Exception as err:
             raise UpdateFailed(f"Error communicating with API: {err}") from err
 
@@ -53,6 +56,9 @@ async def async_setup_entry(
             return await update_variables_for_config_entry(
                 hass, entry, {*CONTROL4_DIMMER_VARS}
             )
+        except ValueError:
+            # The director returns an empty response when no item has the variables
+            return {}
         except C4Exception as err:
             raise UpdateFailed(f"Error communicating with API: {err}") from err
 
